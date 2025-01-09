@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    /* Base Options: */
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "target": "es2020",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "isolatedModules": true,
+    /* Strictness: */
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "checkJs": true,
+    "forceConsistentCasingInFileNames": true,
+    "preserveConstEnums": true,
+    "strictNullChecks": true,
+    /* Bundled projects */
+    "lib": ["es2020"],
+    "moduleResolution": "NodeNext",
+    "module": "NodeNext",
+    "types": ["node", "jest"],
+    "sourceMap": true,
+    "outDir": ".build",
+    /* Path Aliases: */
+    "rootDir": "./",
+  },
+  "include": [
+    "eslint.config.mjs",
+    "**/*.ts",
+    "**/*.mts",
+    "**/*.js",
+    "**/*.mjs",
+    "build.cjs"
+  ],
+  "exclude": [
+    "node_modules",
+    ".build",
+    "serverless"
+  ]
+}

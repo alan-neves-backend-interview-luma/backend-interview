@@ -1,0 +1,22 @@
+app: lumahealthpatientsapi
+service: luma-health-patients-api
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  region: sa-east-1
+
+package:
+  individually: true
+
+functions:
+  getTopPatients:
+    handler: src/v1/getTopPatients.handler
+    events:
+      - http:
+          path: v1/top-patients
+          method: GET
+          cors: true
+
+plugins:
+  - serverless-offline
